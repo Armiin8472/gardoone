@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@drawable/bg_gradient" />
+    <!-- soft radial glow behind the wheel -->
+    <item>
+        <shape android:shape="rectangle">
+            <gradient
+                android:type="radial"
+                android:gradientRadius="420dp"
+                android:centerX="0.5" android:centerY="0.38"
+                android:startColor="#26F1C40F"
+                android:endColor="#00000000" />
+        </shape>
+    </item>
+</layer-list>

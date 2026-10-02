@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/bg_main"
+    android:layoutDirection="rtl"
+    android:padding="14dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/btn_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="▶ بازگشت"
+            android:textColor="#8892A6"
+            android:textSize="16sp"
+            android:padding="6dp" />
+
+        <TextView
+            android:id="@+id/tv_wheel_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textColor="#FFD700"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:singleLine="true"
+            android:ellipsize="end" />
+
+        <TextView
+            android:id="@+id/btn_mode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="عادی"
+            android:textColor="#7CE0B3"
+            android:textSize="15sp"
+            android:background="@drawable/bg_chip"
+            android:paddingStart="14dp"
+            android:paddingEnd="14dp"
+            android:paddingTop="7dp"
+            android:paddingBottom="7dp" />
+    </LinearLayout>
+
+    <com.armin.gardoone.WheelView
+        android:id="@+id/wheel"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <TextView
+        android:id="@+id/tv_round"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textColor="#8892A6"
+        android:textSize="13sp"
+        android:paddingBottom="2dp" />
+
+    <TextView
+        android:id="@+id/tv_result"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textColor="#FFD700"
+        android:textSize="26sp"
+        android:textStyle="bold"
+        android:visibility="gone"
+        android:padding="4dp" />
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none"
+        android:visibility="gone"
+        android:id="@+id/hs_history">
+
+        <LinearLayout
+            android:id="@+id/ll_history"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingTop="4dp"
+            android:paddingBottom="4dp" />
+    </HorizontalScrollView>
+
+    <Button
+        android:id="@+id/btn_spin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="چرخش 🎡"
+        android:textSize="22sp"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        android:background="@drawable/btn_spin"
+        android:stateListAnimator="@null"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:paddingVertical="16dp"
+        android:layout_marginTop="8dp" />
+</LinearLayout>

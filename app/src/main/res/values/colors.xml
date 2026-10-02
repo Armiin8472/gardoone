@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="mode_normal">#7CE0B3</color>
+    <color name="mode_elim">#FF8A8A</color>
+    <color name="mode_final">#FFD700</color>
+</resources>

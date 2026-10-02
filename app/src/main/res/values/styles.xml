@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.Gardoone" parent="Theme.AppCompat.NoActionBar">
+        <item name="android:statusBarColor">#12141A</item>
+        <item name="android:navigationBarColor">#12141A</item>
+        <item name="android:textColor">#EEEEEE</item>
+        <item name="android:windowBackground">#12141A</item>
+    </style>
+
+    <style name="Chip">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingStart">16dp</item>
+        <item name="android:paddingEnd">16dp</item>
+        <item name="android:paddingTop">8dp</item>
+        <item name="android:paddingBottom">8dp</item>
+        <item name="android:layout_margin">4dp</item>
+        <item name="android:textColor">#CCD3E0</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:background">@drawable/bg_chip</item>
+    </style>
+</resources>

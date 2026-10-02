@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/bg_main"
+    android:layoutDirection="rtl"
+    android:padding="16dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="کتابخانه گردونه‌ها"
+        android:textColor="#FFD700"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:paddingTop="6dp"
+        android:paddingBottom="2dp" />
+
+    <TextView
+        android:id="@+id/tv_sub"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="یک گردونه بساز یا از بین ذخیره‌شده‌ها انتخاب کن"
+        android:textColor="#8892A6"
+        android:textSize="13sp"
+        android:gravity="center"
+        android:paddingBottom="8dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/chip_all"
+            style="@style/Chip"
+            android:text="همه"
+            android:textStyle="bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/chip_tagged"
+            style="@style/Chip"
+            android:text="برچسب‌دار"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/chip_untagged"
+            style="@style/Chip"
+            android:text="بدون برچسب"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/lv_wheels"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:divider="@null"
+        android:dividerHeight="0dp"
+        android:paddingTop="6dp" />
+
+    <TextView
+        android:id="@+id/tv_empty"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="هنوز گردونه‌ای نداری\nاولین گردونه‌ات را بساز 🎡"
+        android:textColor="#667085"
+        android:textSize="16sp"
+        android:lineSpacingExtra="6dp"
+        android:visibility="gone" />
+
+    <Button
+        android:id="@+id/btn_new"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="＋ گردونه جدید"
+        android:textSize="18sp"
+        android:textColor="#06241A"
+        android:textStyle="bold"
+        android:background="@drawable/btn_primary"
+        android:stateListAnimator="@null"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:paddingVertical="14dp"
+        android:layout_marginTop="8dp" />
+</LinearLayout>

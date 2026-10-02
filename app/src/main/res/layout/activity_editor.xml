@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/bg_main"
+    android:layoutDirection="rtl">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="6dp">
+
+        <TextView
+            android:id="@+id/btn_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="▶ بازگشت"
+            android:textColor="#8892A6"
+            android:textSize="16sp"
+            android:padding="6dp" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="ویرایش گردونه"
+            android:textColor="#FFD700"
+            android:textSize="19sp"
+            android:textStyle="bold"
+            android:gravity="center" />
+
+        <TextView
+            android:id="@+id/btn_save"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ذخیره 💾"
+            android:textColor="#7CE0B3"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:padding="6dp" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:paddingStart="14dp"
+        android:paddingEnd="14dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/et_title"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:hint="عنوان گردونه (مثلاً: تیم‌ها)"
+                android:textColorHint="#667085"
+                android:textColor="#EEEEEE"
+                android:textSize="17sp"
+                android:background="@drawable/bg_edit"
+                android:paddingStart="14dp"
+                android:paddingEnd="14dp"
+                android:maxLines="1"
+                android:inputType="text" />
+
+            <EditText
+                android:id="@+id/et_tag"
+                android:layout_width="match_parent"
+                android:layout_height="46dp"
+                android:hint="برچسب (اختياري)"
+                android:textColorHint="#667085"
+                android:textColor="#7CE0B3"
+                android:background="@drawable/bg_edit"
+                android:layout_marginTop="8dp"
+                android:paddingStart="14dp"
+                android:paddingEnd="14dp"
+                android:maxLines="1"
+                android:inputType="text" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="استایل رنگ"
+                android:textColor="#CCD3E0"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:layout_marginTop="14dp" />
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollbars="none">
+                <LinearLayout
+                    android:id="@+id/ll_styles"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" />
+            </HorizontalScrollView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="اندازه متن"
+                android:textColor="#CCD3E0"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:layout_marginTop="10dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <SeekBar
+                    android:id="@+id/sb_text"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:max="24"
+                    android:progressTint="#FFD700"
+                    android:thumbTint="#FFD700" />
+
+                <TextView
+                    android:id="@+id/tv_text_size"
+                    android:layout_width="44dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:textColor="#FFD700"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="مدت چرخش"
+                android:textColor="#CCD3E0"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:layout_marginTop="6dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <SeekBar
+                    android:id="@+id/sb_time"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:max="9"
+                    android:progressTint="#FF5B5B"
+                    android:thumbTint="#FF5B5B" />
+
+                <TextView
+                    android:id="@+id/tv_time"
+                    android:layout_width="54dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:textColor="#FF8A8A"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginTop="4dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="حالت عادلانه (جایگزین تصادفی)"
+                    android:textColor="#CCD3E0"
+                    android:textSize="15sp" />
+
+                <androidx.appcompat.widget.SwitchCompat
+                    android:id="@+id/sw_fair"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:thumbTint="#22C55E"
+                    android:trackTint="#2E3646" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="گزینه‌ها"
+                android:textColor="#CCD3E0"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:layout_marginTop="12dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingTop="6dp">
+
+                <EditText
+                    android:id="@+id/et_item"
+                    android:layout_width="0dp"
+                    android:layout_height="46dp"
+                    android:layout_weight="1"
+                    android:hint="گزینه جدید…"
+                    android:textColorHint="#667085"
+                    android:textColor="#EEEEEE"
+                    android:background="@drawable/bg_edit"
+                    android:paddingStart="14dp"
+                    android:paddingEnd="14dp"
+                    android:maxLines="1"
+                    android:inputType="text" />
+
+                <TextView
+                    android:id="@+id/btn_add_item"
+                    android:layout_width="wrap_content"
+                    android:layout_height="46dp"
+                    android:background="@drawable/btn_primary"
+                    android:gravity="center"
+                    android:text="＋"
+                    android:textColor="#06241A"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:paddingStart="18dp"
+                    android:paddingEnd="18dp"
+                    android:layout_marginStart="8dp" />
+            </LinearLayout>
+
+            <ListView
+                android:id="@+id/lv_items"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:divider="@null"
+                android:dividerHeight="0dp"
+                android:layout_marginTop="8dp" />
+        </LinearLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/btn_go_spin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="ذخیره و چرخش 🎡"
+        android:textSize="18sp"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        android:background="@drawable/btn_spin"
+        android:stateListAnimator="@null"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:paddingVertical="14dp"
+        android:layout_margin="14dp" />
+</LinearLayout>
