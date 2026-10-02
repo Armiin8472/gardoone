@@ -135,9 +135,10 @@ class SpinActivity : AppCompatActivity() {
                 btnMode.setTextColor(ContextCompat.getColor(this, R.color.mode_final))
             }
         }
+        val fairTxt = if (wheelData.fair) "روشن" else "خاموش"
         toast(
             when (mode) {
-                0 -> "حالت عادلانه: ${if (wheelData.fair) "روشن" : "خاموش"}"
+                0 -> "حالت عادلانه: $fairTxt"
                 1 -> "حالت حذفی: بازنده از گردونه خارج می‌شود"
                 else -> "حالت فینال: ${finalTargetLabel()} چرخش"
             }
